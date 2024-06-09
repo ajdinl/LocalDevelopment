@@ -6,12 +6,19 @@ class CustomSwiper extends HTMLElement {
 
   connectedCallback() {
     this.initSwiper()
-    document.getElementById('toggle-swiper').addEventListener('click', () => this.toggleSwiper())
   }
 
   initSwiper() {
     this.swiper = new Swiper(this, {
       loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      breakpoints: {
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -23,17 +30,11 @@ class CustomSwiper extends HTMLElement {
       },
     })
   }
-
-  toggleSwiper() {
-    if (this.swiper) {
-      this.swiper.destroy(true, true)
-      this.swiper = null
-      console.log('Swiper destroyed')
-    } else {
-      this.initSwiper()
-      console.log('Swiper initialized')
-    }
-  }
 }
 
 customElements.define('custom-swiper', CustomSwiper)
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiperElement = document.createElement('custom-swiper')
+  document.body.appendChild(swiperElement)
+})

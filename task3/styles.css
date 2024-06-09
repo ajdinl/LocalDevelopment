@@ -37,18 +37,8 @@ body {
   color: #000;
 }
 
-#toggle-swiper {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background: none;
-  color: #000;
-  font-weight: bold;
-  border: 1px solid #000;
-  cursor: pointer;
-}
-
 /* Responsive styles */
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .custom-swiper {
     height: 700px;
   }
