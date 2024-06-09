@@ -1,0 +1,43 @@
+.section-image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 200vh 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.section-image-text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-image-text__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-image-text__content {
+  padding: 20px;
+}
+
+.section-image-text__text {
+  margin-bottom: 20px;
+}
+
+.section-image-text__button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.section-image-text__button:hover {
+  background-color: #333;
+}
